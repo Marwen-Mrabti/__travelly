@@ -1,0 +1,335 @@
+/* GLOBAL STYLE*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* control the rem size => 1rem == 10px*/
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+h1 {
+  font-size: 4.8rem;
+}
+
+h2 {
+  font-size: 3.8rem;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+h4,
+h5 {
+  font-size: 2.8rem;
+}
+
+li,
+button,
+label,
+input,
+p {
+  font-size: 2rem;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  padding: 2rem 6rem;
+  background-color: #4c6e97;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1.8rem;
+  transition: background-color 1s ease-in-out;
+}
+button:hover {
+  background-color: rgba(62, 60, 129, 0.74);
+}
+/* Nav section */
+.main-head {
+  background-color: rgba(19, 28, 39, 0.95);
+  color: white;
+  position:sticky;
+  top:0px;
+  z-index: 5;
+}
+.navbar {
+  min-height: 8vh;
+  width: 90%;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.navbar ul {
+  list-style: none;
+  flex: 1 1 40rem;
+  display: flex;
+  justify-content: space-around;
+}
+.navbar ul li a {
+  padding: 0.3rem;
+  transition: color 1s ease-in-out;
+}
+.navbar ul li a:hover {
+  color: rgba(0, 217, 255, 0.829);
+  transition: color 1s ease-in-out;
+}
+.navbar #logo {
+  flex: 2 1 40rem;
+  font-family: "Pattaya", sans-serif;
+  font-weight: 700;
+  color: cornsilk;
+}
+.navbar #logo:hover {
+  cursor: pointer;
+  color: rgba(29, 161, 155, 0.623);
+  transition: color 1s ease-in-out;
+}
+
+/*HERO SECTION*/
+.hero {
+  min-height: 90vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), transparent),
+    url("repo/img/landing-page.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: blanchedalmond;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero h3 {
+  padding: 5rem;
+  font-weight: normal;
+}
+
+.hero button {
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+/* LOCATIONS SECTION*/
+#locations {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), transparent),
+    url("repo/img/new-york-page.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.locations-head {
+  width: 90%;
+  margin: auto;
+}
+.locations-head h2 {
+  padding: 1rem 0rem;
+  font-size: 3rem;
+  text-decoration: underline;
+  text-decoration-thickness: 0.5rem;
+}
+.locations-head h3 {
+  padding: 4rem 0rem;
+  font-size: 2.5rem;
+  font-weight: normal;
+  background: linear-gradient(45deg, #131c27, #663b34);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.cloud {
+  position: absolute;
+  top: 0%;
+  right: -30%;
+}
+.moving-cloud-1 {
+  top: 0%;
+  opacity: 0.95;
+  animation: cloudAnimation 5s infinite alternate ease-in-out;
+}
+.moving-cloud-2 {
+  top: 20%;
+  z-index: -1;
+  opacity: 0.5;
+  animation: cloudAnimation 10s infinite alternate ease-in-out;
+}
+@keyframes cloudAnimation {
+  from {
+    transform: translate(-10%, -10%);
+  }
+  to {
+    transform: translate(-0%, -0%);
+  }
+}
+
+/* BENEFITS */
+.benefits-head {
+  background: rgba(0, 0, 0, 0.781);
+  padding: 3rem;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+.benefits-head h2 {
+  font-size: 3rem;
+  padding: 1rem;
+}
+.benefits-head h3 {
+  font-size: 2.5rem;
+  padding: 1rem;
+  word-spacing: 1rem;
+}
+.cards {
+  margin: auto;
+  min-height: 70vh;
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card {
+  background-color: rgb(46, 133, 173);
+  flex: 1 1 25rem;
+  min-height: 40vh;
+  margin: 2rem 4rem;
+  text-align: center;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.4),
+    20px 30px 100px rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+}
+.cards img {
+  max-width: 15%;
+  margin: 1rem;
+}
+.card-icon {
+  background-color: rgba(3, 3, 3, 0.514);
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+}
+/* CONTACT FORM*/
+#contact {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), transparent),
+    url("repo/img/contact-mountain.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-wrapper {
+  background: rgba(19, 28, 39, 0.8);
+  color: white;
+  width: 60%;
+  border-radius: 2rem;
+}
+.form-head {
+  text-align: center;
+  padding: 4rem;
+}
+.form-name,
+.form-email {
+  text-align: center;
+  padding: 3rem;
+}
+.form-wrapper label {
+  padding: 0rem 4rem;
+}
+.form-wrapper input {
+  padding: 1rem 3rem;
+}
+.form-submit {
+  width: 100%;
+  margin-top: 8rem;
+  padding: 2rem;
+}
+
+/* FOOTER SECTION*/
+footer {
+  background: rgba(19, 28, 39, 0.9);
+  color: white;
+}
+.footer-wrapper {
+  min-height: 10vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap:wrap;
+}
+.footer-wrapper h5{
+  flex: 1 1 40rem;
+
+}
+.footer-wrapper ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 1 40rem;
+}
+
+/* media query */
+@media screen and (max-width: 935px) {
+  html {
+    font-size: 45%;
+  }
+  .navbar {
+    text-align: center;
+  }
+  .navbar#logo {
+    padding: 1rem;
+  }
+  .locations-head {
+    text-align: center;
+  }
+  .locations-head h3 {
+    background: rgba(10, 10, 10, 0.7);
+    -webkit-text-fill-color: wheat;
+    border-radius: 1.5rem;
+    border-bottom-right-radius: 5rem;
+    border-top-left-radius: 5rem;
+  }
+  .cloud {
+    height: 40rem;
+  }
+  .moving-cloud-1 {
+    z-index: -1;
+  }
+  .moving-cloud-2 {
+    z-index: -2;
+  }
+  .form-wrapper{
+    width:100%;
+  }
+  footer{
+    text-align:center;
+  }
+  footer h5{
+    padding-bottom:2rem;
+  }
+}
